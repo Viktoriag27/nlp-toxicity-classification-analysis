@@ -39,14 +39,11 @@ Each comment is labeled across **five toxicity subcategories**:
 
 This is a **multi-label classification problem** — a single comment may exhibit multiple types of toxicity simultaneously. For example, a comment can be both `toxic` and `insulting`.
 
-![Label Distribution](figures/learning_curve.png)
-
 ### ⚖️ Label Distribution Challenges
 
-While the overall binary label for `toxic` is **almost perfectly balanced** (~47% toxic, ~53% non-toxic), the five finer-grained subcategories are **extremely imbalanced**:
+While the overall binary label for `toxic` is **almost perfectly balanced** (~47% toxic, ~53% non-toxic), some of the five finer-grained subcategories are **extremely imbalanced**:
 
-- `obscene` and `insult` are moderately frequent.
-- `severe_toxic`, `identity_hate` are very rare (under 5% appearance).
+![Label Distribution](Part_1_Vika/subcategories.png)
 
 This imbalance means that standard loss functions (like unweighted binary cross-entropy) would cause the model to ignore minority classes. To address this, we adopt **Weighted Binary Cross-Entropy Loss**, which gives higher importance to underrepresented labels and improves the model’s ability to detect subtle or rare toxicity patterns.
 
