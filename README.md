@@ -1,6 +1,6 @@
 Comprehensive toxicity classification analysis using BERT, rule-based baselines, and data augmentation techniques. Includes limited data learning, model distillation, and performance comparison across different approaches on the Jigsaw toxicity dataset.
 
-## 🚀 Project Overview
+##  Project Overview
 
 **`nlp-toxicity-classification-analysis`** is an end-to-end study of automated toxicity detection on the Jigsaw Toxicity dataset. We explore the entire spectrum of approaches—from coin-flip baselines and handcrafted rule sets, through few-shot fine-tuning of BERT/DistilBERT with data-augmentation techniques, all the way to zero-shot large-language-model (LLM) inference and full-dataset training.  Additionally, we distil our best performing model into a lightweight version, documenting all the process. 
 
@@ -11,7 +11,7 @@ The goal is two-fold:
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | #  | Feature                                                                 | Description                                                                                   |
 |----|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -26,7 +26,7 @@ The goal is two-fold:
 | 9  | **Performance Dashboards & Confusion Matrices**                         | Highlights strengths and weaknesses of each modeling strategy.                                |
 | 10 | **Reproducible Notebooks & Dependency Pinning**                         | Easy-to-follow seeded structure for re-running experiments end-to-end.                              |
 
-## 📚 Dataset and Classification Objective
+##  Dataset and Classification Objective
 
 We use the [Jigsaw Toxic Comment Classification dataset](https://huggingface.co/datasets/Arsive/toxicity_classification_jigsaw), which contains **25,960 user comments** from Wikipedia talk pages, annotated for multiple types of toxicity.
 
@@ -39,7 +39,7 @@ Each comment is labeled across **five toxicity subcategories**:
 
 This is a **multi-label classification problem** — a single comment may exhibit multiple types of toxicity simultaneously. For example, a comment can be both `toxic` and `insulting`.
 
-### ⚖️ Label Distribution Challenges
+###  Label Distribution Challenges
 
 While the overall binary label for `toxic` is **almost perfectly balanced** (~47% toxic, ~53% non-toxic), some of the five finer-grained subcategories are **extremely imbalanced**:
 
@@ -47,12 +47,12 @@ While the overall binary label for `toxic` is **almost perfectly balanced** (~47
 
 This imbalance means that standard loss functions (like unweighted binary cross-entropy) would cause the model to ignore minority classes. To address this, we adopt **Weighted Binary Cross-Entropy Loss**, which gives higher importance to underrepresented labels and improves the model’s ability to detect subtle or rare toxicity patterns.
 
-### 🏁 Objective
+###  Objective
 
 Build a robust, scalable **multi-label classifier** that can accurately detect all five toxicity categories — even with very limited labeled data — while comparing different modeling strategies (rule-based, transformer-based, LLM-based, and distilled models).
 
 
-## 🗂️ Project Structure
+##  Project Structure
 
 The project is organized into four main parts, each building progressively toward a robust and deployable toxicity classification system.
 
@@ -120,7 +120,7 @@ The project is organized into four main parts, each building progressively towar
 
 
 
-## 📈 Performance Summary
+##  Performance Summary
 
 This section summarizes the performance of all key models and strategies evaluated during the project, using macro-averaged metrics where applicable. The focus is on the balance between precision and recall, robustness under low-resource settings, and final-state performance after full fine-tuning.
 
