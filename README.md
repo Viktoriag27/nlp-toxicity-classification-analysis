@@ -9,7 +9,6 @@ The goal is two-fold:
 - **Business impact** – Provide a reproducible pipeline that helps content-moderation teams flag abusive comments quickly and reliably, keeping online communities healthy.
 - **Engineering trade-offs** – Benchmark heavyweight, high-accuracy models against lightweight, distilled alternatives to inform real-world deployment where latency, memory, or cost constraints matter.
 
----
 
 ## Authors
 -  Alejandro Delgado (alejandro.delgado@bse.eu)
@@ -17,6 +16,7 @@ The goal is two-fold:
 -  Noemi Lucchi (noemi.lucchi@bse.eu)
 -  Alex Malo (alex.malo@bse.eu)
   
+--- 
 
 ##  Key Features
 
