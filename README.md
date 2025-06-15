@@ -11,6 +11,13 @@ The goal is two-fold:
 
 ---
 
+## Authors
+-  Alejandro Delgado (alejandro.delgado@bse.eu)
+-  Viktoria Gagua (viktoria.gagua@bse.eu)
+-  Noemi Lucchi (noemi.lucchi@bse.eu)
+-  Alex Malo (alex.malo@bse.eu)
+  
+
 ##  Key Features
 
 | #  | Feature                                                                 | Description                                                                                   |
